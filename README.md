@@ -71,23 +71,27 @@ tokenizer_quantized = AutoTokenizer.from_pretrained(quantised_path, model_max_le
 
 3. Create a pipeline for token classification:
 
-`ner_quantized = pipeline("token-classification", model=model_quantized, tokenizer=tokenizer_quantized, aggregation_strategy="first")`
+```
+ner_quantized = pipeline("token-classification", model=model_quantized, tokenizer=tokenizer_quantized, aggregation_strategy="first")
+```
 
-Provide a sample text for Named Entity Recognition:
+4. Provide a sample text for Named Entity Recognition:
 
-`text = '''CLASS Omicron is a variant of SARS-CoV-2 first reported to the World Health Organization by the Network for Genomics Surveillance in South Africa on 24 November 2021. It was first detected in Botswana and has spread to become the predominant variant in circulation around the world.. The SARS-CoV-2 uses ACE2 to infect target cells and the expression of the ACE2 levels are increased following treatment with angiotensin-converting enzyme inhibitors (ACEIs); in addition, angiotensin receptor blockers (ARBs) has emerged speculation that patients with COVID-19 receiving these drugs may be under at a potentially increased risk for developing severe and fatal illness [11, 12]. Interestingly, when looking at ACE2 expression in different pathological stages (1 to 4), no differences was observed in any of the two lung cancer types (Figure 1C-D), suggesting stage might not the factor affecting ACE2 expression in lung tumor and therefore no significant differences in the susceptibility to SARS-CoV-2 infection among the pathological stages for LUAD and LUSC patients. Chronic kidney disease (CKD) is a global public health problem, and its prevalence is gradually increasing, mainly due to an increase in the number of patients with type 2 diabetes mellitus (T2DM) [1,2,3,4].  Human multidrug and toxin extrusion member 2 (MATE2-K, SLC47A2) plays an important role in the renal elimination of various clinical drugs including the antidiabetic drug metformin. The goal of this study was to characterize genetic variants of MATE2-K and determine their association with the pharmacokinetics of metformin'''`
+```
+text = '''CLASS Omicron is a variant of SARS-CoV-2 first reported to the World Health Organization by the Network for Genomics Surveillance in South Africa on 24 November 2021. It was first detected in Botswana and has spread to become the predominant variant in circulation around the world.. The SARS-CoV-2 uses ACE2 to infect target cells and the expression of the ACE2 levels are increased following treatment with angiotensin-converting enzyme inhibitors (ACEIs); in addition, angiotensin receptor blockers (ARBs) has emerged speculation that patients with COVID-19 receiving these drugs may be under at a potentially increased risk for developing severe and fatal illness [11, 12]. Interestingly, when looking at ACE2 expression in different pathological stages (1 to 4), no differences was observed in any of the two lung cancer types (Figure 1C-D), suggesting stage might not the factor affecting ACE2 expression in lung tumor and therefore no significant differences in the susceptibility to SARS-CoV-2 infection among the pathological stages for LUAD and LUSC patients. Chronic kidney disease (CKD) is a global public health problem, and its prevalence is gradually increasing, mainly due to an increase in the number of patients with type 2 diabetes mellitus (T2DM) [1,2,3,4].  Human multidrug and toxin extrusion member 2 (MATE2-K, SLC47A2) plays an important role in the renal elimination of various clinical drugs including the antidiabetic drug metformin. The goal of this study was to characterize genetic variants of MATE2-K and determine their association with the pharmacokinetics of metformin'''
+```
 
-4. Perform Named Entity Recognition:
+5. Perform Named Entity Recognition:
+```
+pred = ner_quantized(text)
+```
 
-`pred = ner_quantized(text)`
-
-5. Visualize the extracted entities:
+6. Visualize the extracted entities:
 
 ```
 for ent in pred[0]:
     print([ent['start'], ent['end'], text[ent['start']:ent['end']], ent['entity_group'], ent['score']])
 ```
-
 
 The output is listed in the following format: [start_span,end_span,entity,entity_type,score].
 
