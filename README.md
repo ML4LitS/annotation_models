@@ -49,7 +49,7 @@ pip install onnxruntime==1.15.1
 ## Model Loading and Usage
 Once the virtual environment is activated, follow these steps to load and utilise the QEB8L model:
 
-Download the model from the provided Google Drive link and specify the path to the downloaded model file as quantised_path.
+Download/clone the model from the repo and specify the path to the downloaded model folder as 'quantised_path'.
 
 1. Import the required libraries:
 
