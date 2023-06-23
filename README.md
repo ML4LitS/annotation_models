@@ -136,6 +136,9 @@ The entity types are as follows: 'GP': Gene/Protein, 'CD': Chemical/Drug, 'OG': 
 ## Summary
 we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named Entity Recognition. By utilizing the Onnx runtime and quantisation techniques, we achieved a faster and lighter model without compromising performance. The results demonstrate comparable performance to Biobert but with a significant speed improvement.
 
+## Cite 
+Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model. Retrieved from https://gitlab.ebi.ac.uk/literature-services/machine-learning/qeb8l
+
 ## Licence
 CC-by
 
