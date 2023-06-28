@@ -131,7 +131,7 @@ The entity types are as follows: 'GP': Gene/Protein, 'CD': Chemical/Drug, 'OG': 
 | Precision  | 0.91         | 0.85       | 0.90         | 0.90       | 0.93         | 0.94       | 0.91         | 0.90       |
 | Recall     | 0.92         | 0.90       | 0.80         | 0.88       | 0.86         | 0.85       | 0.87         | 0.88       |
 | F1 Score   | 0.92         | 0.88       | 0.85         | 0.89       | 0.90         | 0.89       | 0.89         | 0.89       |
-
+|------------|--------------|------------|--------------|------------|--------------|------------|--------------|------------|
 
 ## Summary
 we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named Entity Recognition. By utilizing the Onnx runtime and quantisation techniques, we achieved a faster and lighter model without compromising performance. The results demonstrate comparable performance to Biobert but with a significant speed improvement.
@@ -139,7 +139,7 @@ we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named E
 ## Cite 
 1. APA 
 
-Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model (Version 0.0.1) [Computer software]. Retrieved from https://gitlab.ebi.ac.uk/literature-services/machine-learning/qeb8l
+Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model (Version 0.0.1) [Computer software]. Retrieved from [https://gitlab.ebi.ac.uk/literature-services/public-projects/QEB8L](https://gitlab.ebi.ac.uk/literature-services/public-projects/QEB8L)
 
 2. Bibtex
 
