@@ -89,7 +89,7 @@ pred = ner_quantized(text)
 6. Visualize the extracted entities:
 
 ```
-for ent in pred[0]:
+for ent in pred:
     print([ent['start'], ent['end'], text[ent['start']:ent['end']], ent['entity_group'], ent['score']])
 ```
 
