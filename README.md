@@ -139,7 +139,7 @@ we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named E
 ## Cite 
 1. APA 
 
-Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model (Version 0.0.1) [Computer software]. Retrieved from [https://gitlab.ebi.ac.uk/literature-services/public-projects/QEB8L](https://gitlab.ebi.ac.uk/literature-services/public-projects/QEB8L)
+Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model (Version 0.0.1) [Computer software]. Retrieved from [https://github.com/ML4LitS/annotation_models](https://github.com/ML4LitS/annotation_models)
 
 2. Bibtex
 
@@ -148,7 +148,7 @@ Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Reco
   doi = {},
   month = {06},
   title = {Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model},
-  url = {https://github.com/github-linguist/linguist},
+  url = {https://github.com/ML4LitS/annotation_models},
   version = {0.0.1},
   year = {2023}
 }
