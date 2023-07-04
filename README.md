@@ -49,10 +49,13 @@ pip install onnxruntime==1.15.1
 ## Model Loading and Usage
 Once the virtual environment is activated, follow these steps to load and utilise the QEB8L model:
 
-Download/clone the model from the repo and specify the path to the downloaded model folder as 'quantised_path'.
+Download/clone the model from the repo and specify the path to the downloaded model folder by creating a variable in Python 
+
+```
+quantised_path = folder_where_the_model_is_located
+```
 
 1. Import the required libraries:
-
 
 ```
 from optimum.pipelines import pipeline
