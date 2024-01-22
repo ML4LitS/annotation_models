@@ -40,7 +40,7 @@ To utilize the QEB8L model for Biomedical Named Entity Recognition, follow the s
 
 
 ```
-pip install optimum==1.8.8
+pip install optimum==1.16.2
 pip install onnx==1.13.1
 pip install onnxruntime==1.15.1
 ```
@@ -112,7 +112,7 @@ The entity types are as follows: 'GP': Gene/Protein, 'CD': Chemical/Drug, 'OG': 
 [814, 825, 'lung cancer', 'DS', 0.9988202]
 [895, 899, 'ACE2', 'GP', 0.9993438]
 [914, 924, 'lung tumor', 'DS', 0.9986173]
-[991, 1011, 'SARS-CoV-2 infection', 'DS'0.9965901]
+[991, 1011, 'SARS-CoV-2 infection', 'DS', 0.9965901]
 [1046, 1050, 'LUAD', 'DS', 0.9971084]
 [1055, 1059, 'LUSC', 'DS', 0.99671656]
 [1070, 1092, 'Chronic kidney disease', 'DS', 0.998764]
