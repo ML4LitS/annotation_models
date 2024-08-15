@@ -3,9 +3,10 @@
 Santosh Tirunagari, Melissa Harrison
 
 ---
+## Summary
+we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named Entity Recognition. By utilizing the Onnx runtime and quantisation techniques, we achieved a faster and lighter model without compromising performance. The results demonstrate comparable performance to Biobert but with a significant speed improvement.
 
 ## Introduction
-
 Biomedical Named Entity Recognition (NER) poses a significant challenge in biomedical information processing due to the extensive lexical variations and ambiguity of out-of-context terms. Recent advancements in models such as BERT, GPT, and LLMs have shown improved performance on bioNER benchmarks. However, these models often demand substantial computational resources for production. We introduce the quantised_epmca_bioformer-8L (QEB8L) model, trained on the Europe PMC fully annotated corpus for genes/proteins, diseases, chemicals, and organisms. The QEB8L model leverages the ONNX runtime and is quantised, resulting in a lighter (77MB) and faster inference process. It achieves comparable results to Biobert but exhibits a remarkable 10x speed improvement on 2-core CPU machines with 1 GB RAM.
 
 A comprehensive, step-by-step guide for running the QEB8L model and setting up the required environment.
@@ -136,25 +137,39 @@ The entity types are as follows: 'GP': Gene/Protein, 'CD': Chemical/Drug, 'OG': 
 | F1 Score   | 0.92         | 0.88       | 0.85         | 0.89       | 0.90         | 0.89       | 0.89         | 0.89       |
 
 
-## Summary
-we present the Quantised EPMCA Bioformer-8L (QEB8L) model for Biomedical Named Entity Recognition. By utilizing the Onnx runtime and quantisation techniques, we achieved a faster and lighter model without compromising performance. The results demonstrate comparable performance to Biobert but with a significant speed improvement.
+## Parameters selected
+| Parameter                        | Value                              | Description                                                |
+|----------------------------------|------------------------------------|------------------------------------------------------------|
+| `evaluation_strategy`            | `"epoch"`                          | Evaluate the model at the end of each epoch                |
+| `learning_rate`                  | `1e-5`                             | Learning rate for training                                 |
+| `num_train_epochs`               | `5`                                | Number of training epochs                                  |
+| `weight_decay`                   | `0.01`                             | Weight decay for regularization                            |
+| `warmup_steps`                   | `500`                              | Number of warmup steps during training                     |
+| `metric_for_best_model`          | `'f1'`                             | Metric used to determine the best model                    |
+| `greater_is_better`              | `True`                             | Whether a higher value for the metric is better            |
+| `gradient_accumulation_steps`    | `2`                                | Number of steps to accumulate gradients before updating    |
+
 
 ## Cite 
 1. APA 
-
+<pre>
 Tirunagari, S., & Harisson, M. (2023). Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model (Version 0.0.1) [Computer software]. Retrieved from [https://github.com/ML4LitS/annotation_models](https://github.com/ML4LitS/annotation_models)
+</pre>
 
 2. Bibtex
-
-@software{tirunagari2023accelerating,
-  author = {Tirunagari, Santosh and Harisson, Melissa},
-  doi = {},
-  month = {06},
-  title = {Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model},
-  url = {https://github.com/ML4LitS/annotation_models},
-  version = {0.0.1},
-  year = {2023}
+<pre>
+@misc{Tirunagari_Harisson_2023,
+  author       = {Santosh Tirunagari and Melissa Harisson},
+  title        = {Accelerating Biomedical Named Entity Recognition with Quantised EPMCA Bioformer-8L (QEB8L) Model},
+  year         = {2023},
+  version      = {0.0.1},
+  url          = {https://gitlab.ebi.ac.uk/literature-services/machine-learning/qeb8l},
+  note         = {Software available from \url{https://gitlab.ebi.ac.uk/literature-services/machine-learning/qeb8l}},
+  howpublished = {GitLab repository},
+  month        = jun,
+  orcid        = {0000-0002-9064-1965}
 }
+</pre>
 
 ## Licence
 CC-by
